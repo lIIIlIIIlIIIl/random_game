@@ -23,11 +23,14 @@ const RandomImage = ({ images }) => {
 
   return (
     <div className="random-image-container">
-      <button onClick={getRandomIndex} className="randomize-button">{selectedImages.length === 0 ? "시작" : "다음"}</button>
+      {selectedImages.length === 0 ? (
+        <button onClick={getRandomIndex} className="randomize-button">{selectedImages.length === 0 ? "시작" : "다음"}</button>
+      ) : <></>}
+      
       {randomIndex === 0 ? <></> : (
         <>
-          <img src={require(`../public/images/${randomIndex}.png`)} alt={images[randomIndex]} className="random-image" />
-          <p>{images[randomIndex]}</p>
+          <img onClick={getRandomIndex} src={require(`../public/images/${randomIndex}.png`)} alt={images[randomIndex]} className="random-image" />
+          <p className='name'>{images[randomIndex]}</p>
         </>
       )}
     </div>

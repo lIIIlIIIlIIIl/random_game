@@ -3,7 +3,7 @@
 }
 
 .random-image-container {
-  margin-top: 20px;
+  margin-top: 50px;
   align-items: center;
   justify-content: center;
 }
@@ -13,7 +13,8 @@
   height: 600px;
   display: block;
   margin: 0 auto;
-  padding-top: 60px;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .randomize-button {
@@ -29,4 +30,12 @@
 
 .randomize-button:hover {
   background-color: #0056b3;
+}
+
+
+.name{
+  padding-top: 500px;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 50px;
 }
